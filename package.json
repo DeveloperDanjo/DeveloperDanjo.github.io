@@ -1,0 +1,10 @@
+{
+  "name": "danjoseph.dev",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {},
+  "author": "Dan Joseph <dan@danjoseph.dev>",
+  "devDependencies": {
+    "vuepress": "^1.1.0"
+  }
+}

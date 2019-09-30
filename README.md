@@ -29,7 +29,7 @@ meta :
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <div>
-<a class="github-button" href="https://github.com/danjo519" aria-label="Follow @danjo519 on GitHub">Follow @danjo519</a>
+<a class="github-button" href="https://github.com/DeveloperDanjo" aria-label="Follow @DeveloperDanjo on GitHub">Follow @DeveloperDanjo</a>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </div>
 </div>

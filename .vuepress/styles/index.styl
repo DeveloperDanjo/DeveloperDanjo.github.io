@@ -1,3 +1,37 @@
+.badge.info {
+    background-color: cornflowerblue !important;
+}
+
 .home-page .hero img {
     border-radius: 50%;
+    box-shadow: 0 10px 20px 10px rgba(0,0,0,0.2);
+}
+
+.home .features {
+    justify-content: space-around !important;
+
+    .feature h2, .feature .feature-img {
+        text-align: center;
+    }
+}
+
+.resume {
+    h1, h2, h3, h4, h5, h6 {
+        em {
+            float: right;
+            font-size: 0.6em;
+            vertical-align: bottom;
+            line-height: 2.1;
+        }
+    }
+
+    .badge {
+        filter: grayscale(30%);
+    }
+
+    blockquote code {
+        font-size: 0.7rem;
+        position: relative;
+        top: -3px;
+    }
 }

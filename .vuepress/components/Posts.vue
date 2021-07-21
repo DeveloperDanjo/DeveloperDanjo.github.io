@@ -2,7 +2,6 @@
   <div class="posts" v-if="posts.length">
     <div class="post" v-for="post in posts">
         <img v-if="post.frontmatter.image" :src="$withBase(post.frontmatter.image)" alt="">
-        <img v-else src="/img/blog.svg">
         <div>
             <router-link :to="post.path">{{post.frontmatter.title}}</router-link>
             <div>{{post.frontmatter.description}}</div>
@@ -38,7 +37,7 @@ export default {
 }
 .post {
     display: flex;
-    
+
     img {
         height: 64px;
         width: 64px;

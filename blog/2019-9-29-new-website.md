@@ -6,8 +6,6 @@ meta :
     content : Dan Joseph - New Website
   - name : og:type
     content : article
-  - name : og:image
-    content : https://danjoseph.dev/img/blog.svg
   - name : og:url
     content : https://danjoseph.dev/blog/2019-9-29-new-website.md
   - name : og:site_name

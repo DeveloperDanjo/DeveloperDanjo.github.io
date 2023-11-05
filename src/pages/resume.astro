@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import Badge from "../components/Badge.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <h1 class="text-3xl w-full font-bold">Resume</h1>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Expanding my knowledge of all aspects of frontend software development including JavaScript and related frameworks and technologies, CSS and related frameworks and technologies, and HTML.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Rochester Institute of Technology"
+      link="https://rit.edu/"
+      linkProps={{ target: '_blank'}}
+      subtitle="2007 to 2012 at Rochester, NY"
+    >
+      <div>Graduation: May 2012, B.S. <a href="https://www.rit.edu/computing/department-software-engineering" target="_blank">Software Engineering</a></div>
+      <div>Current GPA 3.8, PFOS 3.8</div>
+  </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Principal Applications Engineer at Oracle Corporation"
+      subtitle="Since 2012 at Oracle Industries Construction and Engineering, (Remote)"
+    >
+      <div><a href="https://www.oracle.com/industries/construction-engineering/" target="_blank">Oracle Industries » Construction and Engineering</a></div>
+      <div class="my-4">
+        <ul class="flex flex-wrap gap-4">
+          <li class="badge badge-ghost">JavaScript</li>
+          <li class="badge badge-ghost">LESS</li>
+          <li class="badge badge-ghost">HTML</li>
+          <li class="badge badge-ghost">Grunt</li>
+          <li class="badge badge-ghost">Java</li>
+          <li class="badge badge-ghost">Spring</li>
+          <li class="badge badge-ghost">Jersey</li>
+          <li class="badge badge-ghost">Grunt</li>
+          <li class="badge badge-ghost">Webpack</li>
+          <li class="badge badge-ghost">RequireJS</li>
+          <li class="badge badge-ghost">Sinon</li>
+          <li class="badge badge-ghost">QUnit</li>
+        </ul>
+      </div>
+      <ul class="list-disc mt-4">
+        <li>Designed and developed several in-house components and frameworks in JavaScript used by several applications within our organization.</li>
+        <li>Implemented custom theme for new cloud-based application.</li>
+        <li>Built several high-profile pages for same application; pages can handle tens of thousands of records.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <!--<div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+    <li>
+      <a href="#" target="_blank"> Certification Name (with link)</a>
+    </li>
+  </ul>-->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-3 columns-1 mx-6">
+    <li class="inline-grid">
+      JavaScript
+      <ul class="list-disc ml-6">
+        <li>ES5 <Badge value="high" status="success" /></li>
+        <li>ES6+ <Badge value="high" status="success" /></li>
+        <li>TypeScript <Badge value="high" status="success" /></li>
+      </ul>
+    </li>
+    <li class="inline-grid">
+      <span>CSS <Badge value="high" status="success" /></span>
+      <ul class="list-disc ml-6">
+        <li>LESS <Badge value="high" status="success" /></li>
+        <li>SCSS <Badge value="learning" status="info" /></li>
+      </ul>
+    </li>
+    <li class="inline-grid">
+      Tooling
+      <ul class="list-disc ml-6">
+        <li>Grunt <Badge value="high" status="success" /></li>
+        <li>Webpack <Badge value="high" status="success" /></li>
+        <li>RequireJS <Badge value="high" status="success" /></li>
+        <li>Sinon <Badge value="high" status="success" /></li>
+        <li>QUnit <Badge value="high" status="success" /></li>
+        <li>Cypress <Badge value="learning" status="info" /></li>
+      </ul>
+    </li>
+    <li class="inline-grid">
+      Java
+      <ul class="list-disc ml-6">
+        <li>Java 8+ <Badge value="high" status="success" /></li>
+        <li>Jersey <Badge value="familiar" status="warning" /></li>
+        <li>Spring <Badge value="familiar" status="warning" /></li>
+      </ul>
+    </li>
+    <li>SQL <Badge value="high" status="success" /></li>
+  </ul>
+</BaseLayout>

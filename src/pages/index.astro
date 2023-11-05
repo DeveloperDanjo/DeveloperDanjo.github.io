@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+import jsLogo from '../../public/img/js-logo.png';
+import nodeLogo from '../../public/img/node-logo.png';
+import cssLogo from '../../public/img/css-logo.png';
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hello 😃</div>
+    <h1 class="text-5xl font-bold">I'm Dan Joseph</h1>
+    <div class="text-3xl py-3 font-bold">Frontend Software Engineer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        I focus on developing high-performance frontends for data-heavy applications using JavaScript and CSS.
+      </text>
+    </div>
+    <div class="mt-8 flex gap-4">
+      <a class="btn" href="https://hachyderm.io/@DeveloperDanjo" target="_blank">Let's discuss!</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/danielgjoseph/" target="_blank">Let's connect!</a>
+    </div>
+    <div class="mt-8 md:grid gap-4 grid-cols-3 grid-rows-[auto_1fr] grid-flow-col">
+        <div class="text-2xl text-center mb-4 md:mb-0">JavaScript Web Applications</div>
+        <div>
+          <Image class="h-24 w-auto mx-auto mb-4" format="webp" src={jsLogo} alt="JS logo" />
+          <p>Developing libraries and applications using latest JavaScript libraries.</p>
+        </div>
+        <div class="text-2xl text-center mb-4 md:mb-0">Node Applications</div>
+        <div>
+          <Image class="h-24 w-auto mx-auto mb-4" format="webp" src={nodeLogo} alt="Node.JS logo" />
+          <p class="mb-4">Developing backend microservices using Node JS.</p>
+          <p>Developing frontend applications using Electron.</p>
+        </div>
+        <div class="text-2xl text-center mb-4 md:mb-0">CSS</div>
+        <div>
+          <Image class="h-24 w-auto mx-auto mb-4" format="webp" src={cssLogo} alt="CSS logo" />
+          <p>Implementing UX designs using CSS frameworks and preprocessors like Bootstrap, LESS, and SCSS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + post.slug}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</BaseLayout>

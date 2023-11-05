@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danjoseph.dev/sitemap-index.xml
